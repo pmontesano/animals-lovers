@@ -120,12 +120,10 @@ export const getAnimalUsersByAnimalIdFromState = (
   max = 10
 ) => {
   if (!state.animals.hasOwnProperty(animalId)) return [];
+
   return state.animals[animalId].users
-    .map((userId) => {
-      if (state.users[userId] !== undefined) {
-        return userDataResumed(state.users[userId]);
-      }
-    })
+    .filter((userId) => state.users[userId] !== undefined)
+    .map((userId) => userDataResumed(state.users[userId]))
     .sort(sortFunc)
     .slice(0, max);
 };

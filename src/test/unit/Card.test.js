@@ -14,7 +14,7 @@ const props = {
   title: 'title',
   action: true,
   id: '1234',
-  handleClick: handleButtonClick,
+  handleClick: (e) => handleButtonClick(),
 };
 
 describe('Card', () => {

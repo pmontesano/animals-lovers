@@ -2,7 +2,6 @@ import React from 'react';
 
 const Table = ({ users, photo, handleUserClick }) => {
   const handleButtonRemove = (id) => (e) => {
-    e.preventDefault();
     handleUserClick(id);
   };
 

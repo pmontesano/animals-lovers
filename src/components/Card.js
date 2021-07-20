@@ -2,7 +2,6 @@ import React from 'react';
 
 const Card = ({ photo, alt, title, action, handleClick, id }) => {
   const handleButtonClick = (id) => (e) => {
-    e.preventDefault();
     handleClick(id);
   };
 
