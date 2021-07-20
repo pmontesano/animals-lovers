@@ -7,24 +7,19 @@ import Card from '../../components/Card';
 
 configure({ adapter: new Adapter() });
 
+const props = {
+  animals: [{ id: '1234', name: 'Bear', photo: 'bear.svg' }],
+  handleClick: jest.fn,
+};
+
 describe('AnimalsList', () => {
   it('should render correctly', () => {
-    const props = {
-      animals: [{ id: '1234', name: 'Bear', photo: 'bear.svg' }],
-      handleClick: jest.fn,
-    };
-
     const wrapper = create(<AnimalList {...props} />);
 
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render card component inside', () => {
-    const props = {
-      animals: [{ id: '1234', name: 'Bear', photo: 'bear.svg' }],
-      handleClick: jest.fn,
-    };
-
     const wrapper = shallow(<AnimalList {...props} />);
 
     expect(wrapper.find(Card)).toHaveLength(1);
