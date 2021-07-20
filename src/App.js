@@ -1,23 +1,114 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import './assets/styles/main.css';
+import './App.scss';
+import Header from './components/Header';
+import AnimalList from './components/AminalList';
+import UsersList from './components/UsersList';
+import Loading from './components/Loading';
+
+import {
+  transformData,
+  getAnimalListFromState,
+  getAnimalUsersByAnimalIdFromState,
+  sortUsersByPointsDesc,
+  sortAnimalByAlphaAsc,
+} from './utils/transformData';
+
+const initialState = {
+  route: 'animalList',
+  data: {
+    users: {},
+    animals: {},
+  },
+};
 
 function App() {
+  const [state, setState] = useState(initialState);
+  const [isLoading, setIsLoading] = useState(true);
+  const { route } = state;
+
+  const fetchData = async () => {
+    return await axios.get('users.json');
+  };
+
+  useEffect(() => {
+    fetchData().then((res) => {
+      setState({ ...state, data: transformData(res.data) });
+      setIsLoading(false);
+    });
+  }, []);
+
+  const animalsArray = getAnimalListFromState(state.data).sort(
+    sortAnimalByAlphaAsc
+  );
+
+  const usersFromAnimalsArray = getAnimalUsersByAnimalIdFromState(
+    state.data,
+    state.animalSelected,
+    sortUsersByPointsDesc,
+    state.userLimit
+  );
+
+  const animalSelect = (id) => {
+    setState({
+      ...state,
+      route: 'usersList',
+      animalSelected: id,
+      userLimit: 10,
+    });
+  };
+
+  const removeUserClick = (id) => {
+    const newUsersState = Object.entries(state.data.users).filter(
+      ([_, user]) => user.id !== id
+    );
+
+    const transformUserState = Object.fromEntries(newUsersState);
+
+    // console.log('transformUserState', transformUserState);
+
+    setState({
+      ...state,
+      data: {
+        ...state.data,
+        animals: state.data.animals,
+        users: transformUserState,
+      },
+    });
+  };
+
+  const showMoreUsers = (limit) => {
+    setState({
+      ...state,
+      userLimit: limit,
+      fullList: true,
+    });
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <main className="bg-gray-100">
+        <Header />
+        {isLoading ? (
+          <Loading className="loading-wrapper" />
+        ) : (
+          <div className="container" data-testid="resolved">
+            {route === 'animalList' && (
+              <AnimalList animals={animalsArray} handleClick={animalSelect} />
+            )}
+            {route === 'usersList' && (
+              <UsersList
+                animalName={state.animalSelected}
+                users={usersFromAnimalsArray}
+                fullList={state.fullList}
+                handleClick={showMoreUsers}
+                handleRemoveUserClick={removeUserClick}
+              />
+            )}
+          </div>
+        )}
+      </main>
     </div>
   );
 }

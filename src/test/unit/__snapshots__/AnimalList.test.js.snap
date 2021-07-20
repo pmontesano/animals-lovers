@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AnimalsList should render correctly 1`] = `
+<div>
+  <ul
+    className="flex flex-wrap -mx-2"
+  >
+    <li
+      className="list-animals w-full sm:w1/2 md:w-1/4 px-2 my-6"
+    >
+      <div
+        className="card"
+      >
+        <div
+          className="card-photo"
+        >
+          <img
+            className="mx-auto"
+            src="bear.svg"
+          />
+        </div>
+        <div
+          className="px-6 py-4"
+        >
+          <div
+            className="font-bold text-xl mb-2"
+          >
+            Users for Bear
+          </div>
+        </div>
+        <div
+          className="px-6 py-4"
+        >
+          <button
+            className="btn btn-blue btn-blue:hover"
+            onClick={[Function]}
+          >
+            See details
+          </button>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+`;
