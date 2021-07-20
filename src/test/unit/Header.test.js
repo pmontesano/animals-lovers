@@ -2,21 +2,19 @@ import React from 'react';
 import { create } from 'react-test-renderer';
 import { shallow, configure } from 'enzyme';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
-import Table from '../../components/Table';
+import Header from '../../components/Header';
 
 configure({ adapter: new Adapter() });
 
-const handleButtonRemove = jest.fn();
-
-const props = {
-  users: [],
-  photo: 'photo.svg',
-  handleUserClick: handleButtonRemove,
-};
-
-describe('Table', () => {
+describe('Header', () => {
   it('should render correctly', () => {
-    const wrapper = create(<Table {...props} />);
+    const wrapper = create(<Header />);
+
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should be has logo', () => {
+    const wrapper = shallow(<Header />);
+    expect(wrapper.find('img')).toHaveLength(1);
   });
 });

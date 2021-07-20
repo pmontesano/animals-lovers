@@ -74,7 +74,7 @@ const Table = ({ users, photo, handleUserClick }) => {
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                       <button
-                        className="btn-remove-user"
+                        className="btn-remove"
                         onClick={handleButtonRemove(user.id)}
                       >
                         Delete user
