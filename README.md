@@ -1,4 +1,6 @@
-# Animals Lovers App
+# Animals Lovers App :feet:
+
+> This is web application Frontend.
 
 ## Available Scripts
 
