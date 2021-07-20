@@ -1,5 +1,7 @@
 # Animals Lovers App
 
+> This is web application Frontend.
+
 ## Available Scripts
 
 In the project directory, you can run:
