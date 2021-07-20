@@ -14,6 +14,7 @@ const UsersList = ({
   };
 
   const handleShowMoreClick = (limit) => (e) => {
+    e.preventDefault();
     handleClick(limit);
   };
 
