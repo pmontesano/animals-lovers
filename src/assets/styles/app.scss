@@ -21,6 +21,12 @@
   animation: spinner 1.5s linear infinite;
 }
 
+.inline-list li {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
 @-webkit-keyframes spinner {
   0% {
     -webkit-transform: rotate(0deg);

@@ -65,16 +65,19 @@ const Table = ({ users, photo, handleUserClick }) => {
                     <td className="px-6 py-4 whitespace-nowrap">
                       <ul className="inline-list">
                         {user.animals.map((animal, i) => (
-                          <li key={i}> {animal} </li>
+                          <li key={i} className="text-gray-400">
+                            {' '}
+                            {animal}{' '}
+                          </li>
                         ))}
                       </ul>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-yellow-500 text-lg">
                       {user.points}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                       <button
-                        className="btn-remove"
+                        className="btn-remove text-blue-400 hover:text-blue-500"
                         onClick={handleButtonRemove(user.id)}
                       >
                         Delete user
