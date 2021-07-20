@@ -66,8 +66,6 @@ function App() {
 
     const transformUserState = Object.fromEntries(newUsersState);
 
-    // console.log('transformUserState', transformUserState);
-
     setState({
       ...state,
       data: {
