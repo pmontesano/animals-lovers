@@ -7,7 +7,6 @@ import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 
 configure({ adapter: new Adapter() });
 import App from '../../App';
-import Loading from '../../components/Loading';
 
 jest.mock('axios');
 

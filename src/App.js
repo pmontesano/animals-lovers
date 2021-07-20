@@ -91,7 +91,7 @@ function App() {
         {isLoading ? (
           <Loading className="loading-wrapper" />
         ) : (
-          <div className="container" data-testid="resolved">
+          <div className="container">
             {route === 'animalList' && (
               <AnimalList animals={animalsArray} handleClick={animalSelect} />
             )}
