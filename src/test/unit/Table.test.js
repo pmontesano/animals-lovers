@@ -11,6 +11,7 @@ const handleButtonRemove = jest.fn();
 const props = {
   users: [],
   photo: 'photo.svg',
+  thElements: [],
   handleUserClick: handleButtonRemove,
 };
 

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './assets/styles/main.css';
 import './assets/styles/app.scss';
 import Header from './components/Header';
 import AnimalList from './components/AminalList';

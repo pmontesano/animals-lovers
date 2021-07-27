@@ -10,110 +10,98 @@ exports[`UsersList should render correctly 1`] = `
     BEAR USERS
   </h2>
   <div
-    className="flex flex-col"
+    className="table-wrapper"
   >
-    <div
-      className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8"
+    <table
+      className="table"
     >
-      <div
-        className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8 overflow-x-auto"
+      <thead
+        className="table-thead"
       >
-        <div
-          className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg overflow-x-auto"
-        >
-          <table
-            className="min-w-full divide-y divide-gray-200"
+        <tr>
+          <th
+            className="table-th"
           >
-            <thead
-              className="bg-gray-50"
+            Name
+          </th>
+          <th
+            className="table-th"
+          >
+            Animal List
+          </th>
+          <th
+            className="table-th"
+          >
+            Point
+          </th>
+          <th
+            className="table-th"
+          >
+            Actions
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        className="table-tbody"
+      >
+        <tr>
+          <td
+            className="table-td"
+          >
+            <div
+              className="flex items-center"
             >
-              <tr>
-                <th
-                  className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                  scope="col"
+              <div
+                className="flex-shrink-0 h-10 w-10"
+              >
+                <img
+                  alt="Stefanie"
+                  className="h-10 w-10 rounded-full"
+                  src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                />
+              </div>
+              <div
+                className="ml-4"
+              >
+                <div
+                  className="text-sm font-medium text-gray-900"
                 >
-                  Name
-                </th>
-                <th
-                  className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                  scope="col"
-                >
-                  Animal List
-                </th>
-                <th
-                  className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                  scope="col"
-                >
-                  Points
-                </th>
-                <th
-                  className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                  scope="col"
-                >
-                  Actions
-                </th>
-              </tr>
-            </thead>
-            <tbody
-              className="bg-white divide-y divide-gray-200"
+                  Stefanie
+                   
+                  Bond
+                </div>
+              </div>
+            </div>
+          </td>
+          <td
+            className="table-td"
+          >
+            <ul
+              className="inline-list"
+            />
+          </td>
+          <td
+            className="table-td"
+          >
+            <span
+              className="text-sm text-yellow-500 text-lg"
             >
-              <tr>
-                <td
-                  className="px-6 py-4 whitespace-nowrap"
-                >
-                  <div
-                    className="flex items-center"
-                  >
-                    <div
-                      className="flex-shrink-0 h-10 w-10"
-                    >
-                      <img
-                        alt="Stefanie"
-                        className="h-10 w-10 rounded-full"
-                        src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                      />
-                    </div>
-                    <div
-                      className="ml-4"
-                    >
-                      <div
-                        className="text-sm font-medium text-gray-900"
-                      >
-                        Stefanie
-                         
-                        Bond
-                      </div>
-                    </div>
-                  </div>
-                </td>
-                <td
-                  className="px-6 py-4 whitespace-nowrap"
-                >
-                  <ul
-                    className="inline-list"
-                  />
-                </td>
-                <td
-                  className="px-6 py-4 whitespace-nowrap text-sm text-yellow-500 text-lg"
-                >
-                  100
-                </td>
-                <td
-                  className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
-                >
-                  <button
-                    className="btn-remove text-blue-400 hover:text-blue-500"
-                    onClick={[Function]}
-                  >
-                    Delete user
-                  </button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
+              100
+            </span>
+          </td>
+          <td
+            className="table-td text-right"
+          >
+            <button
+              className="btn-remove text-blue-400 hover:text-blue-500"
+              onClick={[Function]}
+            >
+              Delete user
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
   <div
     className="text-center py-8"

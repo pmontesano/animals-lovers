@@ -22,7 +22,11 @@ const UsersList = ({
   return (
     <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
       <h2 className="font-medium text-2xl py-6">{title}</h2>
-      <Table users={users} handleUserClick={handleUserClick} />
+      <Table
+        users={users}
+        handleUserClick={handleUserClick}
+        thElements={['Name', 'Animal List', 'Point', 'Actions']}
+      />
       {!fullList && (
         <div className="text-center py-8">
           <button
