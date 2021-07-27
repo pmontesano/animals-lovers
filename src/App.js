@@ -85,7 +85,7 @@ function App() {
 
   return (
     <div className="app">
-      <main className="bg-gray-100">
+      <main>
         <Header />
         {isLoading ? (
           <Loading className="loading-wrapper" />

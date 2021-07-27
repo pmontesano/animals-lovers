@@ -5,8 +5,16 @@
 @use postcss-nested-ancestors;
 @use postcss-nested;
 
+main {
+  @apply bg-gray-100;
+}
+
 .container {
   @apply h-full overflow-y-auto py-16 mx-auto px-4;
+}
+
+.title {
+  @apply font-medium text-2xl py-6;
 }
 
 .btn {
@@ -21,8 +29,28 @@
   @apply bg-blue-700;
 }
 
+.button {
+  @apply btn btn-blue;
+}
+
+.button-remove {
+  @apply text-blue-400 hover:text-blue-500;
+}
+
 .card {
   @apply rounded overflow-hidden shadow-lg text-center py-10 border border-gray-200 bg-white;
+}
+
+.card-row {
+  @apply px-6 py-4;
+}
+
+.card-title {
+  @apply font-bold text-xl mb-2;
+}
+
+.card-photo img {
+  @apply mx-auto;
 }
 
 .app-header {
@@ -54,4 +82,16 @@ table
 
 .table-td {
   @apply px-6 py-4 whitespace-nowrap;
+}
+
+.actions-row {
+  @apply text-center py-8;
+}
+
+.animals-list {
+  @apply flex flex-wrap -mx-2;
+}
+
+.animals-list-li {
+  @apply w-full px-2 my-6;
 }

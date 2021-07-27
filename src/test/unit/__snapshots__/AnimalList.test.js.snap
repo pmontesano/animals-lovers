@@ -3,10 +3,10 @@
 exports[`AnimalsList should render correctly 1`] = `
 <div>
   <ul
-    className="flex flex-wrap -mx-2"
+    className="animals-list"
   >
     <li
-      className="list-animals w-full sm:w1/2 md:w-1/4 px-2 my-6"
+      className="animals-list-li sm:w1/2 md:w-1/4"
     >
       <div
         className="card"
@@ -15,24 +15,23 @@ exports[`AnimalsList should render correctly 1`] = `
           className="card-photo"
         >
           <img
-            className="mx-auto"
             src="bear.svg"
           />
         </div>
         <div
-          className="px-6 py-4"
+          className="card-row"
         >
           <div
-            className="font-bold text-xl mb-2"
+            className="card-title"
           >
             Users for Bear
           </div>
         </div>
         <div
-          className="px-6 py-4"
+          className="card-row"
         >
           <button
-            className="btn btn-blue btn-blue:hover"
+            className="button"
             onClick={[Function]}
           >
             See details

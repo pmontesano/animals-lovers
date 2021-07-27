@@ -1,14 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`UsersList should render correctly 1`] = `
-<div
-  className="max-w-7xl mx-auto sm:px-6 lg:px-8"
->
+Array [
   <h2
-    className="font-medium text-2xl py-6"
+    className="title"
   >
     BEAR USERS
-  </h2>
+  </h2>,
   <div
     className="table-wrapper"
   >
@@ -93,7 +91,7 @@ exports[`UsersList should render correctly 1`] = `
             className="table-td text-right"
           >
             <button
-              className="btn-remove text-blue-400 hover:text-blue-500"
+              className="button-remove"
               onClick={[Function]}
             >
               Delete user
@@ -102,16 +100,16 @@ exports[`UsersList should render correctly 1`] = `
         </tr>
       </tbody>
     </table>
-  </div>
+  </div>,
   <div
-    className="text-center py-8"
+    className="actions-row"
   >
     <button
-      className="btn btn-blue btn-blue:hover"
+      className="button"
       onClick={[Function]}
     >
       Show more
     </button>
-  </div>
-</div>
+  </div>,
+]
 `;

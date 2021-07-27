@@ -4,9 +4,7 @@ exports[`App should render correctly 1`] = `
 <div
   className="app"
 >
-  <main
-    className="bg-gray-100"
-  >
+  <main>
     <header
       className="app-header"
     >

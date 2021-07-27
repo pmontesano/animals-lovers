@@ -9,24 +9,23 @@ exports[`Card should render correctly 1`] = `
   >
     <img
       alt="photo alt"
-      className="mx-auto"
       src="somephoto.svg"
     />
   </div>
   <div
-    className="px-6 py-4"
+    className="card-row"
   >
     <div
-      className="font-bold text-xl mb-2"
+      className="card-title"
     >
       title
     </div>
   </div>
   <div
-    className="px-6 py-4"
+    className="card-row"
   >
     <button
-      className="btn btn-blue btn-blue:hover"
+      className="button"
       onClick={[Function]}
     />
   </div>

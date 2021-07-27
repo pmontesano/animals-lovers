@@ -20,24 +20,21 @@ const UsersList = ({
   const title = animalName.toUpperCase() + ' USERS';
 
   return (
-    <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
-      <h2 className="font-medium text-2xl py-6">{title}</h2>
+    <>
+      <h2 className="title">{title}</h2>
       <Table
         users={users}
         handleUserClick={handleUserClick}
         thElements={['Name', 'Animal List', 'Point', 'Actions']}
       />
       {!fullList && (
-        <div className="text-center py-8">
-          <button
-            className="btn btn-blue btn-blue:hover"
-            onClick={handleShowMoreClick(limit)}
-          >
+        <div className="actions-row">
+          <button className="button" onClick={handleShowMoreClick(limit)}>
             Show more
           </button>
         </div>
       )}
-    </div>
+    </>
   );
 };
 

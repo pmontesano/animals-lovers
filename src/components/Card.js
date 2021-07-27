@@ -8,20 +8,15 @@ const Card = ({ photo, alt, title, action, handleClick, id }) => {
   return (
     <div className="card">
       <div className="card-photo">
-        <img className="mx-auto" src={photo} alt={alt} />
+        <img src={photo} alt={alt} />
       </div>
 
-      <div className="px-6 py-4">
-        <div className={`${title ? 'font-bold text-xl mb-2' : 'skeleton-box'}`}>
-          {title}
-        </div>
+      <div className="card-row">
+        <div className="card-title">{title}</div>
       </div>
-      <div className="px-6 py-4">
+      <div className="card-row">
         {action && (
-          <button
-            className="btn btn-blue btn-blue:hover"
-            onClick={handleButtonClick(id)}
-          >
+          <button className="button" onClick={handleButtonClick(id)}>
             {action}
           </button>
         )}

@@ -57,7 +57,7 @@ const Table = ({ users, photo, handleUserClick, thElements }) => {
               </td>
               <td className="table-td text-right">
                 <button
-                  className="btn-remove text-blue-400 hover:text-blue-500"
+                  className="button-remove"
                   onClick={handleButtonRemove(user.id)}
                 >
                   Delete user
